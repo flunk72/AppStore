@@ -27,6 +27,20 @@ const addedBook = (bookId) => {
   }
 }
 
+const removedBook = (bookId) => {
+  return{
+    type: 'REMOVED_BOOK',
+    payload: bookId
+  }
+}
+
+const allRemovedBook = (bookId) => {
+  return{
+    type: 'ALL_REMOVED_BOOK',
+    payload: bookId
+  }
+}
+
 
 const fetchBooks = (bookService, dispatch) => () => {
   dispatch(booksRequsted())
@@ -39,5 +53,7 @@ const fetchBooks = (bookService, dispatch) => () => {
 
 export {
   fetchBooks,
-  addedBook
+  addedBook,
+  removedBook,
+  allRemovedBook
 }
